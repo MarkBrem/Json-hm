@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Система керування студентами</h1>
+
+    <div id="form-container">
+        <h2>Додати нового студента</h2>
+        <form id="student-form">
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="surname">Прізвище:</label>
+            <input type="text" id="surname" name="surname" required>
+            <label for="age">Вік:</label>
+            <input type="number" id="age" name="age" required>
+            <label for="course">Курс:</label>
+            <input type="text" id="course" name="course" required>
+            <label for="faculty">Факультет:</label>
+            <input type="text" id="faculty" name="faculty" required>
+            <label for="subjects">Список курсів (через кому):</label>
+            <input type="text" id="subjects" name="subjects" required>
+            <button type="submit">Додати студента</button>
+        </form>
+    </div>
+
+    <div id="table-container">
+        <h2>Список студентів</h2>
+        <input type="text" id="search" placeholder="Пошук за прізвищем або курсом...">
+        <table id="students-table">
+            <thead>
+                <tr>
+                    <th>Ім'я</th>
+                    <th>Прізвище</th>
+                    <th>Вік</th>
+                    <th>Курс</th>
+                    <th>Факультет</th>
+                    <th>Курси</th>
+                    <th>Дії</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Динамічно генеровані рядки -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Редагувати інформацію про студента</h2>
+            <form id="edit-student-form">
+                <!-- Поля для редагування -->
+                <input type="hidden" id="edit-id">
+                <label for="edit-name">Ім'я:</label>
+                <input type="text" id="edit-name" name="edit-name" required>
+                <label for="edit-surname">Прізвище:</label>
+                <input type="text" id="edit-surname" name="edit-surname" required>
+                <label for="edit-age">Вік:</label>
+                <input type="number" id="edit-age" name="edit-age" required>
+                <label for="edit-course">Курс:</label>
+                <input type="text" id="edit-course" name="edit-course" required>
+                <label for="edit-faculty">Факультет:</label>
+                <input type="text" id="edit-faculty" name="edit-faculty" required>
+                <label for="edit-subjects">Список курсів:</label>
+                <input type="text" id="edit-subjects" name="edit-subjects" required>
+                <button type="submit">Зберегти зміни</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="./index.js"></script>
+</body>
+</html>
